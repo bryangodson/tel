@@ -5,6 +5,14 @@ This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-
 First, run the development server:
 
 ```bash
+# clone the repo with git clone [repo url]
+git clone [url]
+
+#install dependencies
+cd repo-location
+
+npm install
+#start development server
 npm run dev
 # or
 yarn dev

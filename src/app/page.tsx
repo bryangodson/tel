@@ -1,5 +1,8 @@
-import styles from "./page.module.css";
 
 export default function Home() {
-  return <div className={styles.wrapper}></div>;
+  return (
+    <div className="container">
+     
+    </div>
+  );
 }
