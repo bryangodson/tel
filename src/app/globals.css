@@ -1,0 +1,90 @@
+@import url("https://fonts.googleapis.com/css2?family=Playwrite+DE+VA+Guides&family=SUSE:wght@100..800&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "SUSE", sans-serif;
+  transition: all 0.25s ease-out;
+  scroll-behavior: smooth;
+}
+:root {
+  --primary: #03694c;
+  --secondary: #fa871b;
+  --font-small: 0.8rem;
+  --font-medium: 1rem;
+  --font-large: 1.3rem;
+  --text-color: #333;
+  --background: #fefefd;
+  --heading: 3rem;
+  --header-background: #fefefdc4;
+  --grayscale: grayscale(0%);
+}
+.play_write {
+  font-family: "Playwrite DE VA Guides", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+html {
+  font-size: 16px;
+  background: var(--background);
+}
+body {
+  width: 100%;
+  height: 100%;
+  overflow-x: hidden;
+  color: var(--text-color);
+}
+::placeholder {
+  font-family: "SUSE", sans-serif;
+  font-size: 0.9rem;
+  color: var(--text-color);
+}
+p {
+  line-height: 27px;
+  font-size: 1.1rem !important;
+}
+
+.button {
+  width: 100%;
+  background: var(--text-color);
+  border-radius: 30px;
+  height: 40px;
+  display: grid;
+  place-items: center;
+  font-size: var(--font-medium);
+}
+.button.labeled,
+.button.outline {
+  background: transparent;
+  border: 2px solid var(--text-color);
+  color: var(--text-color);
+}
+.button.labeled {
+  border: 0;
+}
+.button a {
+  text-decoration: none;
+  color: var(--text-color);
+  font-size: var(--font-medium);
+  width: 100%;
+  height: 100%;
+  display: grid;
+  place-items: center;
+}
+.button.primary a {
+  color: var(--background);
+}
+.container {
+  padding: 20px;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --primary: #047a59;
+    --secondary: #fa871b;
+    --text-color: #fefefd;
+    --background: #333;
+    --header-background: #333333c5;
+    --grayscale: grayscale(60%);
+  }
+}
