@@ -16,13 +16,13 @@ function VisionAndStory({
   priority = false,
 }: VisionAndStoryProps) {
   const [ref, isVisible] = useIntersectionObserver({
-    threshold: [0.8, 0.3],
+    threshold: [0.6, 0],
     rootMargin: "-20px 0px -20px 0px",
   });
 
   return (
     <div
-      className={`${styles.our_story} ${isVisible && styles.slide}`}
+      className={`${styles.our_story} ${isVisible ? styles.slide : ""}`}
       ref={ref}>
       <h3>{title}</h3>
       <Image src={image} alt="person" priority={priority} />

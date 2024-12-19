@@ -17,7 +17,6 @@ export const useIntersectionObserver = (
   useEffect(() => {
     const threshold = options.threshold || [0];
     const rootMargin = options.rootMargin || "0px";
-
     const observer = new IntersectionObserver(
       ([entry]) => {
         const entryThreshold = Array.isArray(threshold)
@@ -29,7 +28,7 @@ export const useIntersectionObserver = (
         if (entry.intersectionRatio >= entryThreshold) {
           setIsVisible(true); // Element has entered the viewport
         } else if (entry.intersectionRatio <= exitThreshold) {
-          setIsVisible(false); // Element has completely left the viewport
+          setIsVisible(false); // Element has  left the viewport
         }
       },
       { threshold, rootMargin }

@@ -39,18 +39,19 @@
 }
 
 .hero section {
-  margin-top: 20px;
   display: flex;
   flex-direction: column;
-  row-gap: 10px;
+  row-gap: 15px;
 }
 
 .hero h1 {
   font-size: var(--heading);
   font-weight: 800;
+  display: block;
 }
 .hero p {
   text-wrap: pretty;
+  margin-block: 40px;
 }
 .arrow {
   display: grid;
@@ -64,15 +65,17 @@
 }
 .our_story {
   width: 100%;
-  margin-top: 40px;
+  margin-top: 20px;
   overflow: hidden;
   position: relative;
   height: 400px;
   color: #fefefd;
   opacity: 0;
+  border-radius: 10px;
 }
 .our_story.slide {
   opacity: 1;
+  border-radius: 10px;
 }
 
 .our_story section {
@@ -80,21 +83,20 @@
   position: absolute;
   bottom: -100%;
   background: #fa871b28;
-  z-index: 2;
+  width: 100%;
+  border-radius: 0 0 10px 10px;
 }
 
 .our_story.slide section {
-  bottom: 0;
+  bottom: 0px;
   backdrop-filter: blur(10px);
+  border-radius: 0 0 10px 10px;
 }
-/* .our_story.slide:hover section {
-  bottom: -100%;
-} */
+
 .our_story h3 {
   font-size: var(--font-large);
   position: absolute;
   top: -50px;
-  backdrop-filter: blur(10px);
   padding: 5px;
   left: 0;
   z-index: 2;
@@ -102,6 +104,7 @@
 }
 .our_story.slide h3 {
   top: 0;
+  font-family: "Playwrite DE VA Guides", serif;
 }
 
 .our_story img {
@@ -109,9 +112,27 @@
   height: 400px;
   object-fit: cover;
   filter: var(--grayscale);
-  border-radius: 10px;
   transform: scale(1);
+  border-radius: 10px;
 }
 .our_story.slide img {
   transform: scale(1.4);
+  border-radius: 10px;
+}
+.our_programs_component {
+  margin-top: 40px;
+  width: 100%;
+  height: auto;
+  padding: 10px;
+  border-radius: 10px;
+}
+.our_programs_component img {
+  width: 40px;
+  height: 40px;
+  object-fit: cover;
+  margin-bottom: 12px;
+}
+.our_programs_component h3 {
+  font-size: var(--font-large);
+  font-family: "Playwrite DE VA Guides", serif;
 }
