@@ -4,11 +4,18 @@ import { useIntersectionObserver } from "../hooks/intersection_observer";
 interface FadeInProps {
   children: ReactNode;
   slideFrom?: boolean;
+  threshold?: Array<number>;
+  rootMargin?: string;
 }
-function FadeIn({ children, slideFrom }: FadeInProps) {
+function FadeIn({
+  children,
+  slideFrom,
+  threshold = [0.8, 0],
+  rootMargin = "20px 0px 20px 0px",
+}: FadeInProps) {
   const [ref, isVisible] = useIntersectionObserver({
-    threshold: [0.8, 0],
-    rootMargin: "20px 0px 20px 0px",
+    threshold,
+    rootMargin,
   });
   return (
     <div

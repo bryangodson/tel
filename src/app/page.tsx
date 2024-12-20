@@ -4,7 +4,6 @@ import VisionAndStory from "./components/our_story";
 import person from "./images/woman-smile.jpeg";
 import vision from "./images/vision2.jpeg";
 import OurPrograms from "./components/our_programs";
-// import VerticalLine from "./components/vertical_line";
 import FadeIn from "./components/fadeIn";
 import education from "./images/education.png";
 import community from "./images/community.png";
@@ -12,6 +11,7 @@ import compassion from "./images/compassion.png";
 import entrepreneurship from "./images/entrepreneurship.png";
 import mentorship from "./images/mentorship.png";
 import empowerment from "./images/empowerment.png";
+import Footer from "./components/footer";
 export default function Home() {
   const OUR_PROGRAMS = [
     {
@@ -69,59 +69,64 @@ export default function Home() {
   return (
     <div>
       <Header />
-      <div className="container">
-        <Hero />
+      <main>
+        <div className="container">
+          <Hero />
 
-        <VisionAndStory
-          title="Our Vision"
-          description=" A world where everyone has access to resources, support, and opportunities to reach their full potential"
-          image={vision}
-          priority
-        />
-        <div className="our_programs_div">
-          <FadeIn>
-            <h3 className="title">Our Values</h3>
-          </FadeIn>
-          {OUR_VALUES.map(({ title, description, icon, slideFrom }, index) => {
-            return (
-              <FadeIn key={index} slideFrom={slideFrom}>
-                <OurPrograms
-                  icon={icon}
-                  title={title}
-                  description={description}
-                />
-              </FadeIn>
-            );
-          })}
-        </div>
-        <VisionAndStory
-          title="Our Story"
-          description=" Founded on empathy, resilience, and determination. The Essence League
+          <VisionAndStory
+            title="Our Vision"
+            description=" A world where everyone has access to resources, support, and opportunities to reach their full potential"
+            image={vision}
+            priority
+          />
+          <div className="our_programs_div">
+            <FadeIn>
+              <h3 className="title">Our Values</h3>
+            </FadeIn>
+            {OUR_VALUES.map(
+              ({ title, description, icon, slideFrom }, index) => {
+                return (
+                  <FadeIn key={index} slideFrom={slideFrom}>
+                    <OurPrograms
+                      icon={icon}
+                      title={title}
+                      description={description}
+                    />
+                  </FadeIn>
+                );
+              }
+            )}
+          </div>
+          <VisionAndStory
+            title="Our Story"
+            description=" Founded on empathy, resilience, and determination. The Essence League
           addresses interconnected challenges facing individuals and
           communities. Our team of passionate professionals, mentors, and
           entrepreneurs create lasting impacts."
-          image={person}
-          priority
-        />
-        <div className="our_programs_div">
-          <FadeIn>
-            <h3 className="title">Our Programs</h3>
-          </FadeIn>
-          {OUR_PROGRAMS.map(
-            ({ title, description, icon, slideFrom }, index) => {
-              return (
-                <FadeIn key={index} slideFrom={slideFrom}>
-                  <OurPrograms
-                    icon={icon}
-                    title={title}
-                    description={description}
-                  />
-                </FadeIn>
-              );
-            }
-          )}
+            image={person}
+            priority
+          />
+          <div className="our_programs_div" id="programs">
+            <FadeIn>
+              <h3 className="title">Our Programs</h3>
+            </FadeIn>
+            {OUR_PROGRAMS.map(
+              ({ title, description, icon, slideFrom }, index) => {
+                return (
+                  <FadeIn key={index} slideFrom={slideFrom}>
+                    <OurPrograms
+                      icon={icon}
+                      title={title}
+                      description={description}
+                    />
+                  </FadeIn>
+                );
+              }
+            )}
+          </div>
         </div>
-      </div>
+      </main>
+      <Footer />
     </div>
   );
 }

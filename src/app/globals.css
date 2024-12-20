@@ -6,6 +6,7 @@
   font-family: "SUSE", sans-serif;
   transition: all 0.3s ease-out;
   scroll-behavior: smooth;
+  scroll-padding: 60px;
 }
 :root {
   --primary: #03694c;
@@ -19,25 +20,27 @@
   --header-background: #fefefdc4;
   --grayscale: grayscale(0%);
   --global-padding: 10px;
+  --header-height: 60px;
+  --invert: invert(0);
 }
-.play_write {
+/* .play_write {
   font-family: "Playwrite DE VA Guides", serif;
   transform: scale(0);
   opacity: 0;
   color: var(--primary);
   display: block;
   width: max-content;
-}
-.play_write.slide_in {
+} */
+
+.slide_in {
   transform: scale(1);
   opacity: 1;
   transition-delay: 0.3s;
 }
-.play_write.second {
+.second {
   transform: scale(0);
-  color: var(--secondary);
 }
-.play_write.second.slide_in {
+.second.slide_in {
   transform: scale(1);
   opacity: 1;
   transition-delay: 0.4s;
@@ -45,11 +48,38 @@
 html {
   font-size: 16px;
   background: var(--background);
+  overflow-x: hidden;
 }
 body {
   width: 100vw;
   height: 100%;
   overflow-x: hidden;
+  color: var(--text-color);
+}
+nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+  position: absolute;
+  top: var(--header-height);
+  background: var(--header-background);
+  backdrop-filter: blur(10px);
+  padding: 10px;
+  right: -100%;
+  text-transform: uppercase;
+  row-gap: 15px;
+}
+nav.menuClicked {
+  right: 0;
+}
+nav.menuClosed {
+  right: -100%;
+}
+a {
+  text-decoration: none;
+  font-size: var(--font-large);
   color: var(--text-color);
 }
 ::placeholder {
@@ -109,10 +139,8 @@ small {
   opacity: 0.7;
 }
 .our_programs_div .title {
-  font-size: var(--heading);
-  margin-top: 40px;
-  font-family: "Playwrite DE VA Guides", serif;
-  color: var(--secondary);
+  margin-top: 20px;
+  font-size: var(--font-large);
 }
 @keyframes slide_left {
   from {
@@ -148,6 +176,18 @@ small {
 .slide_right {
   animation-name: slide_right;
 }
+.footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background: #8195643b;
+  padding: 20px;
+}
+.footer img {
+  width: 40px;
+  height: 40px;
+}
 @media (prefers-color-scheme: dark) {
   :root {
     --primary: #047a59;
@@ -156,5 +196,6 @@ small {
     --background: #333;
     --header-background: #333333c5;
     --grayscale: grayscale(60%);
+    --invert: invert(100%);
   }
 }
