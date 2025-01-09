@@ -1,17 +1,17 @@
-import Header from "./components/header";
-import Hero from "./components/hero";
-import VisionAndStory from "./components/our_story";
+import Header from "../components/header";
+import Hero from "../components/hero";
+import VisionAndStory from "../components/our_story";
 import person from "./images/woman-smile.jpeg";
 import vision from "./images/vision2.jpeg";
-import OurPrograms from "./components/our_programs";
-import FadeIn from "./components/fadeIn";
+import OurPrograms from "../components/our_programs";
+import FadeIn from "../components/fadeIn";
 import education from "./images/education.png";
 import community from "./images/community.png";
 import compassion from "./images/compassion.png";
 import entrepreneurship from "./images/entrepreneurship.png";
 import mentorship from "./images/mentorship.png";
 import empowerment from "./images/empowerment.png";
-import Footer from "./components/footer";
+import Footer from "../components/footer";
 export default function Home() {
   const OUR_PROGRAMS = [
     {

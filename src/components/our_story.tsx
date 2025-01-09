@@ -2,7 +2,7 @@
 import React from "react";
 import styles from "@/app/page.module.css";
 import Image, { StaticImageData } from "next/image";
-import { useIntersectionObserver } from "@/app/hooks/intersection_observer";
+import { useIntersectionObserver } from "@/hooks/intersection_observer";
 interface VisionAndStoryProps {
   title: string;
   description: string;
