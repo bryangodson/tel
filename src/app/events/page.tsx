@@ -1,5 +1,10 @@
 import React from "react";
+import Header from "@/components/header";
 
 export default function Page() {
-  return <div>Page</div>;
+  return (
+    <div>
+      <Header />
+    </div>
+  );
 }

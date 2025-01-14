@@ -1,14 +1,16 @@
 "use client";
 import React, { useEffect, useState, useCallback } from "react";
-import styles from "@/app/page.module.css";
-import logo from "../images/tel_logo.png";
+// import styles from "@/styles/menu.module.css";
 import Image from "next/image";
 import MenuNavigationItems from "./menu";
+import SearchBar from "./search_bar";
 const Header = () => {
   const [menuClicked, setMenuClicked] = useState(false);
+  //toggle mobile nav display
   const handleMenuClick = useCallback(() => {
     setMenuClicked(!menuClicked);
   }, [menuClicked]);
+  //remove nav upon scroll
   useEffect(() => {
     document.onscroll = () => setMenuClicked(false);
     return () => {
@@ -17,19 +19,22 @@ const Header = () => {
   }, [handleMenuClick]);
 
   return (
-    <header className={styles.header}>
+    <header className="shadow-md bg-tel-white w-full flex items-center justify-between p-2 h-16 sticky top-0">
       <section>
-        <Image src={logo} alt="logo" />
-        <span>The Essence League</span>
+        <Image src="/images/tel_logo.jpeg" alt="logo" width={60} height={60} />
       </section>
       <MenuNavigationItems menuClicked={menuClicked} />
-      <section
+      <SearchBar />
+
+      {/* <section
         onClick={handleMenuClick}
-        className={`${menuClicked ? styles.menuClicked : styles.menuClosed}`}>
+        className={`${
+          menuClicked ? styles.menuClicked : styles.menuClosed
+        } lg:invisible`}>
         <span></span>
         <span></span>
         <span></span>
-      </section>
+      </section> */}
     </header>
   );
 };

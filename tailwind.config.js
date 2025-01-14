@@ -1,8 +1,16 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: ["./app/**/*.{js,ts,jsx,tsx}", "./src/**/*.{js,ts,jsx,tsx}"],
+  content: ["./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
-    extend: {},
+    extend: {
+      colors: {
+        "tel-blue": "#054E96",
+        "tel-shade": "#02032E",
+        "tel-grey": "#747272",
+        "tel-white": "#fff",
+        "tel-black": "#333",
+      },
+    },
   },
   plugins: [],
 };
