@@ -9,6 +9,7 @@ module.exports = {
         "tel-grey": "#747272",
         "tel-white": "#fff",
         "tel-black": "#333",
+        "tel-blue-shade": "#054d96d3",
       },
     },
   },

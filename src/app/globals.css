@@ -19,8 +19,72 @@ html {
   overflow-x: hidden;
 }
 body {
-  @apply w-full;
   @apply text-tel-black;
   @apply h-full;
-  @apply overflow-x-hidden;
+  width: 100%;
+  overflow-x: hidden !important;
+}
+.body {
+  @apply lg:px-10;
+  @apply px-5;
+  @apply md:px-7;
+}
+.button {
+  border-radius: 30px;
+  height: 40px;
+  display: grid;
+  place-items: center;
+  @apply bg-tel-blue;
+  @apply text-tel-white;
+  @apply hover:bg-tel-blue-shade;
+}
+.button.labeled,
+.button.outline {
+  background: transparent;
+  @apply border-tel-black;
+  border-width: 1px;
+}
+.button.labeled {
+  border: 0;
+}
+.button a {
+  text-decoration: none;
+  width: 100%;
+  height: 100%;
+  display: grid;
+  place-items: center;
+  border: 0;
+}
+.menu {
+  width: 30px;
+  height: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.menu span {
+  width: 25px;
+  height: 3px;
+  background: #333;
+  margin-block: 1.25px;
+}
+.menu.menuClicked span:nth-child(2) {
+  transform: translateX(110%);
+  opacity: 0;
+}
+.menu.menuClosed span:nth-child(2) {
+  transform: translateX(0%);
+  opacity: 1;
+}
+
+.menu.menuClicked span:nth-child(1) {
+  transform: rotate(45deg) translate(6px) translateX(-5px);
+  margin-block: 0;
+}
+.menu.menuClicked span:nth-child(3) {
+  transform: rotate(-45deg) translateY(-6px) translateX(5px);
+  margin-block: 0;
 }
