@@ -5,15 +5,15 @@ import SocialMediaIcons from "./social_media_icons";
 import Button from "./button";
 function Footer() {
   return (
-    <div className="bg-tel-blue flex flex-col md:flex-row md:gap-x-3 justify-evenly items-center p-5">
+    <div className="bg-tel-blue flex flex-col lg:flex-row md:gap-x-3 justify-evenly items-center p-5 py-14">
       <Image
         src="/images/tel_logo.jpeg"
         alt="logo"
         width={80}
         height={80}
-        className="mb-8 md:mb-0"
+        className="mb-8 lg:mb-0"
       />
-      <section className="grid gap-y-3">
+      <section className="grid  grid-rows-2">
         <MenuNavigationItems menuClicked={false} forFooter />
         <SocialMediaIcons forFooter />
       </section>

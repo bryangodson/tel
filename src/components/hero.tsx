@@ -8,7 +8,7 @@ function Hero() {
       }}>
       <section className="absolute top-0 left-0 w-full h-full bg-tel-shade opacity-45 z-10"></section>
       <div className=" w-full lg:w-2/5 z-20 text-tel-white flex flex-col gap-y-7">
-        <h1 className=" text-5xl ">Welcome Message From the CEO</h1>
+        <h1 className=" text-3xl md:text-5xl ">Welcome Message From the CEO</h1>
         <p>
           Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quod
           exercitationem doloremque non, iste ex error nihil nesciunt.
@@ -25,7 +25,7 @@ function Hero() {
             variant="outline"
             label="Learn More About Us"
             to="/about-us"
-            className="w-52 border-tel-white !text-tel-white"
+            className="w-52"
           />
         </section>
       </div>

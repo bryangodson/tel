@@ -38,7 +38,7 @@ function MenuNavigationItems({ menuClicked, forFooter }: menuProps) {
     <nav
       className={`${
         menuClicked ? "right-0" : "right-[-100%]"
-      } flex flex-col lg:flex-row items-center justify-center gap-x-8 md:bg-opacity-0 md:backdrop-blur-0 ${
+      } flex flex-col lg:flex-row items-center justify-center gap-x-8 lg:bg-opacity-0 lg:backdrop-blur-0 ${
         !forFooter
           ? " absolute lg:static top-20  w-full  lg:w-auto gap-y-7 py-5 lg:py-0  bg-tel-white bg-opacity-60 backdrop-blur-md"
           : "space-y-2"
@@ -62,9 +62,9 @@ function MenuNavigationItems({ menuClicked, forFooter }: menuProps) {
           </Link>
         );
       })}
-      {!forFooter ? (
+      {!forFooter && (
         <>
-          <div>
+          <div className="lg:ml-20">
             <SearchBar />
           </div>
           <div className="flex items-center justify-center gap-x-4 ">
@@ -72,8 +72,6 @@ function MenuNavigationItems({ menuClicked, forFooter }: menuProps) {
             <Button label="Donate" />
           </div>
         </>
-      ) : (
-        ""
       )}
     </nav>
   );

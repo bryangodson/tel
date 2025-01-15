@@ -20,7 +20,7 @@ html {
 }
 body {
   @apply text-tel-black;
-  @apply h-full;
+  @apply h-screen;
   width: 100%;
   overflow-x: hidden !important;
 }
@@ -30,19 +30,17 @@ body {
   @apply md:px-7;
 }
 .button {
-  border-radius: 30px;
   height: 40px;
   display: grid;
   place-items: center;
   @apply bg-tel-blue;
   @apply text-tel-white;
   @apply hover:bg-tel-blue-shade;
+  @apply rounded-full;
 }
 .button.labeled,
 .button.outline {
   background: transparent;
-  @apply border-tel-black;
-  border-width: 1px;
 }
 .button.labeled {
   border: 0;

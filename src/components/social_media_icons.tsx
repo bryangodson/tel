@@ -27,7 +27,7 @@ export default function SocialMediaIcons({ forFooter }: props) {
     },
   ];
   return (
-    <div className="w-28 gap-x-2 flex items-center justify-center ">
+    <div className="w-32 gap-x-2 flex items-center justify-center ">
       {socialIcons.map(({ icon, alt, link }, index) => (
         <SocialIcon
           icon={icon}
