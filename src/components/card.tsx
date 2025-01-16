@@ -5,7 +5,7 @@ interface cardProps {
   description?: string;
   date?: string;
   isYoutubeVideo?: boolean;
-  clamp?: number;
+  clamp?: string;
 }
 export default function Card({
   image,
@@ -13,7 +13,7 @@ export default function Card({
   description,
   date,
   isYoutubeVideo = false,
-  clamp = 2,
+  clamp = "line-clamp-2",
 }: cardProps) {
   return (
     <div className="flex flex-col gap-y-2 w-full">
@@ -38,7 +38,7 @@ export default function Card({
       </div>
       <h3 className="text-lg font-bold">{title}</h3>
       <p
-        className={`text-tel-grey text-ellipsis overflow-hidden line-clamp-${clamp} text-sm`}>
+        className={`text-tel-grey text-ellipsis overflow-hidden ${clamp} text-sm`}>
         {description}
       </p>
       <span className="font-semibold text-tel-grey ">{date || ""}</span>

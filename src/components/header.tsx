@@ -1,5 +1,5 @@
 "use client";
-import React, { useEffect, useState, useCallback } from "react";
+import React, { useState, useCallback } from "react";
 import Image from "next/image";
 import MenuNavigationItems from "./menu";
 
@@ -9,13 +9,6 @@ const Header = () => {
   const handleMenuClick = useCallback(() => {
     setMenuClicked(!menuClicked);
   }, [menuClicked]);
-  //remove nav upon scroll
-  useEffect(() => {
-    document.onscroll = () => setMenuClicked(false);
-    return () => {
-      document.onscroll = null;
-    };
-  }, [handleMenuClick]);
 
   return (
     <header
