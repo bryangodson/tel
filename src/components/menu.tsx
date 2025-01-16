@@ -61,7 +61,7 @@ function MenuNavigationItems({ menuClicked, forFooter }: menuProps) {
       })}
       {!forFooter && (
         <>
-          <div className="lg:ml-20">
+          <div>
             <SearchBar />
           </div>
           <div className="flex items-center justify-center gap-x-4 ">
