@@ -21,7 +21,7 @@ export default function Card({
         {isYoutubeVideo && (
           <section className="w-full h-full absolute top-0 left-0 grid place-items-center bg-tel-shade bg-opacity-70">
             <Image
-              src="/images/instagram.png"
+              src="/tel/images/instagram.png"
               alt="youtube logo"
               width={30}
               height={30}
@@ -29,7 +29,7 @@ export default function Card({
           </section>
         )}
         <Image
-          src={`/images/${image}`}
+          src={`/tel/images/${image}`}
           alt={title}
           className="w-full h-40 object-cover"
           width={320}
