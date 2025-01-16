@@ -2,7 +2,7 @@ import Button from "./button";
 function Hero() {
   return (
     <div
-      className="w-full p-10 bg-[url(/images/hero.jpg)] bg-cover bg-center flex items-center relative"
+      className="w-full p-10 bg-[url(/tel/images/hero.jpg)] bg-cover bg-center flex items-center relative"
       style={{
         height: "calc(100svh - 120px)",
       }}>
