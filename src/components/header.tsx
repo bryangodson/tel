@@ -2,7 +2,8 @@
 import React, { useEffect, useState, useCallback } from "react";
 import Image from "next/image";
 import MenuNavigationItems from "./menu";
-
+const isGituhProd = true;
+const imagePaths = isGituhProd ? "/tel" : "";
 const Header = () => {
   const [menuClicked, setMenuClicked] = useState(false);
   //toggle mobile nav display
@@ -20,7 +21,12 @@ const Header = () => {
   return (
     <header
       className={`shadow-md bg-tel-white w-full flex items-center justify-between p-2 h-20 sticky top-0 z-30 `}>
-      <Image src="/images/tel_logo.jpeg" alt="logo" width={80} height={80} />
+      <Image
+        src={`${imagePaths}/images/tel_logo.jpeg`}
+        alt="logo"
+        width={80}
+        height={80}
+      />
       <MenuNavigationItems menuClicked={menuClicked} />
 
       <section

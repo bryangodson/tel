@@ -1,6 +1,8 @@
 "use client";
 import React from "react";
 import Image from "next/image";
+const isGituhProd = true;
+const imagePaths = isGituhProd ? "/tel" : "";
 interface searchBarProps {
   placeholder?: string;
   className?: string;
@@ -20,7 +22,7 @@ export default function SearchBar({
         className || ""
       }`}>
       <Image
-        src="/images/search_icon.png"
+        src={`${imagePaths}/images/search_icon.png`}
         alt="search icon"
         width={16}
         height={16}

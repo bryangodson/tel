@@ -1,8 +1,10 @@
 import Button from "./button";
+const isGituhProd = true;
+const imagePaths = isGituhProd ? "/tel" : "";
 function Hero() {
   return (
     <div
-      className=" w-full p-10 bg-[url(/images/hero.jpg)] bg-cover bg-center flex items-center relative"
+      className={`w - full p-10 bg-[url(${imagePaths}/images/hero.jpg)] bg - cover bg - center flex items - center relative`}
       style={{
         height: "calc(100svh - 120px)",
       }}>
