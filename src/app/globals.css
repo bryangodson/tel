@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Playwrite+DE+VA+Guides&family=SUSE:wght@100..800&display=swap");
+/* @import url("https://fonts.googleapis.com/css2?family=Playwrite+DE+VA+Guides&family=SUSE:wght@100..800&display=swap"); */
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -7,7 +7,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "SUSE", sans-serif;
+  font-family: "SUSE", "Ubuntu", sans-serif;
   transition: all 0.3s ease-out;
   scroll-behavior: smooth;
   scroll-padding: 60px;
@@ -28,23 +28,18 @@ body {
   @apply lg:px-10;
   @apply px-5;
   @apply md:px-7;
+  @apply py-16;
 }
 .button {
   height: 40px;
   display: grid;
   place-items: center;
-  @apply bg-tel-blue;
-  @apply text-tel-white;
-  @apply hover:bg-tel-blue-shade;
-  @apply rounded-full;
+  background: #054e96;
+  border-radius: 999px;
+  color: #fff;
+  border: 2px solid #054e96;
 }
-.button.labeled,
-.button.outline {
-  background: transparent;
-}
-.button.labeled {
-  border: 0;
-}
+
 .button a {
   text-decoration: none;
   width: 100%;

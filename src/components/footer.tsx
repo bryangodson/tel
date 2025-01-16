@@ -21,13 +21,13 @@ function Footer() {
         <input
           type="email"
           name="email"
-          id="email"
+          id="newsletter"
           placeholder="What's your Email"
           className="focus:outline-none p-4 h-full"
         />
         <Button
           label="Sign up for Newsletter"
-          className="w-full md:w-52 !bg-blue-500"
+          className="w-full md:w-52 !bg-blue-500 !border-0"
         />
       </section>
     </div>

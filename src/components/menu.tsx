@@ -40,12 +40,9 @@ function MenuNavigationItems({ menuClicked, forFooter }: menuProps) {
         menuClicked ? "right-0" : "right-[-100%]"
       } flex flex-col lg:flex-row items-center justify-center gap-x-8 lg:bg-opacity-0 lg:backdrop-blur-0 ${
         !forFooter
-          ? " absolute lg:static top-20  w-full  lg:w-auto gap-y-7 py-5 lg:py-0  bg-tel-white bg-opacity-60 backdrop-blur-md"
+          ? " absolute lg:static top-20  w-full  lg:w-auto gap-y-7 py-5 lg:py-0  bg-tel-white bg-opacity-60 backdrop-blur-md lg:h-[calc(100svh- 120px)]"
           : "space-y-2"
-      } `}
-      style={{
-        height: !forFooter ? "calc(100svh - 120px)" : "auto",
-      }}>
+      } `}>
       {Links.map(({ href, label }, index) => {
         return (
           <Link

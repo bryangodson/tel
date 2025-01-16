@@ -19,13 +19,12 @@ function Hero() {
           <Button
             label="Sign up for Newsletter"
             to="#newsletter"
-            className="w-52"
+            className="!w-52"
           />
           <Button
-            variant="outline"
             label="Learn More About Us"
             to="/about-us"
-            className="w-52"
+            className="!w-52 !bg-transparent !border-tel-white"
           />
         </section>
       </div>

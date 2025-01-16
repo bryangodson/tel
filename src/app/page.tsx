@@ -36,7 +36,7 @@ export default function Page() {
     <div>
       <Header />
       <Hero />
-      <div className="body py-16 flex flex-col gap-y-16">
+      <div className="body  flex flex-col gap-y-16">
         {/* publications */}
 
         <div>
