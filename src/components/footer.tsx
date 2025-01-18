@@ -1,5 +1,5 @@
 import React from "react";
-import Image from "next/image";
+import Image from "@/components/image";
 import MenuNavigationItems from "./menu";
 import SocialMediaIcons from "./social_media_icons";
 import Button from "./button";
@@ -7,7 +7,7 @@ function Footer() {
   return (
     <div className="bg-tel-blue flex flex-col lg:flex-row md:gap-x-3 justify-evenly items-center p-5 py-14">
       <Image
-        src="/tel/images/tel_logo.jpeg"
+        src="/images/tel_logo.jpeg"
         alt="logo"
         width={80}
         height={80}

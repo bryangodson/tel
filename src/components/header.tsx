@@ -1,6 +1,6 @@
 "use client";
 import React, { useState, useCallback } from "react";
-import Image from "next/image";
+import Image from "@/components/image";
 import MenuNavigationItems from "./menu";
 
 const Header = () => {
@@ -13,7 +13,7 @@ const Header = () => {
   return (
     <header
       className={`shadow-md bg-tel-white w-full flex items-center justify-between p-2 h-20 sticky top-0 z-30 `}>
-      <Image src="/tel/images/tel_logo.jpeg" alt="logo" width={80} height={80} />
+      <Image src="/images/tel_logo.jpeg" alt="logo" width={80} height={80} />
       <MenuNavigationItems menuClicked={menuClicked} />
 
       <section

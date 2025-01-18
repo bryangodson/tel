@@ -1,5 +1,16 @@
-import Image from "next/image";
+import Image from "@/components/image";
 import Link from "next/link";
+/**
+ * Defines the props for a card component.
+ * @property {string} image - The URL of the image to be displayed in the card.
+ * @property {string} title - The title of the card.
+ * @property {string} [description] - The description of the card (optional).
+ * @property {string} [date] - The date associated with the card (optional).
+ * @property {boolean} [isYoutubeVideo] - Indicates whether the card represents a YouTube video (optional).
+ * @property {string} [clamp] - The CSS class to apply for text clamping (optional).
+ * @property {boolean} [isNewsItem] - Indicates whether the card represents a news item (optional).
+ * @property {string} [to] - The URL to navigate to when the card is clicked (optional).
+ */
 interface cardProps {
   image: string;
   title: string;
@@ -62,7 +73,7 @@ export default function Card({
             </section>
           )}
           <Image
-            src={`/tel/images/${image}`}
+            src={`/images/${image}`}
             alt={title}
             className="w-full h-40 object-cover"
             width={320}

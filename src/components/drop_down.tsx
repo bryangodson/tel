@@ -1,5 +1,13 @@
 import { useState } from "react";
 
+/**
++  * Interface for dropdown component props
++  * @interface dropDownProps
++  * @property {string} label - The default text shown when no item is selected
++  * @property {Array<{item: string, value: string}>} data - Array of dropdown items with display text and values
++  * @property {(value: string) => void} onItemSelected - Callback function triggered when an item is selected
++  */
+
 interface dropDownProps {
   label: string;
   data: Array<{ item: string; value: string }>;

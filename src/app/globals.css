@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Playwrite+DE+VA+Guides&family=SUSE:wght@100..800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=SUSE:wght@100..800&display=swap");
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -38,6 +38,9 @@ body {
   border-radius: 999px;
   color: #fff;
   border: 2px solid #054e96;
+}
+.hide-scroll-bar::-webkit-scrollbar {
+  display: none;
 }
 
 .button a {

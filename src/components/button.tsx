@@ -1,4 +1,14 @@
 import Link from "next/link";
+
+/**
+ * Defines the props for the Button component.
+ * @interface buttonProps
+ * @property {string} [to] - The URL to navigate to when the button is clicked.
+ * @property {() => void} [handleClick] - The function to call when the button is clicked.
+ * @property {string} label - The text to display on the button.
+ * @property {string} [className] - Additional CSS classes to apply to the button.
+ * @property {object} [rest] - Any additional props to pass to the button.
+ */
 interface buttonProps {
   to?: string;
   handleClick?: () => void;

@@ -121,57 +121,45 @@ export default function Page() {
   const handleCurrentViewToggle = (view: viewTypes) => {
     setCurrentView(view);
   };
+  const buttons: Array<{ label: string; value: viewTypes }> = [
+    {
+      label: "Blog",
+      value: "blog",
+    },
+    {
+      label: "Press Release",
+      value: "press release",
+    },
+    {
+      label: "TEL in News",
+      value: "tel in news",
+    },
+    {
+      label: "TEL on Tv",
+      value: "tel on tv",
+    },
+  ];
   return (
     <div>
       <Header />
       <div className="body ">
         <h2 className="font-extrabold text-3xl mb-5">Media</h2>
         <div className="mb-10 pb-10 flex flex-col md:flex-row  gap-x-4 items-center w-full border-b-2 border-dashed">
-          <div className="grid grid-cols-2 gap-y-4 md:gap-y-0 md:flex md:items-center gap-x-4 w-full">
-            <Button
-              label="Blog"
-              handleClick={() => {
-                handleCurrentViewToggle("blog");
-              }}
-              className={`px-3 ${
-                currentView === "blog"
-                  ? "bg-tel-blue"
-                  : "!bg-transparent !border-tel-black !text-tel-black"
-              }`}
-            />
-            <Button
-              label="Press Release"
-              handleClick={() => {
-                handleCurrentViewToggle("press release");
-              }}
-              className={`w-fit px-3 ${
-                currentView === "press release"
-                  ? "bg-tel-blue"
-                  : "!bg-transparent !border-tel-black !text-tel-black"
-              }`}
-            />
-            <Button
-              label="TEL in News"
-              handleClick={() => {
-                handleCurrentViewToggle("tel in news");
-              }}
-              className={`w-fit px-3 ${
-                currentView === "tel in news"
-                  ? "bg-tel-blue"
-                  : "!bg-transparent !border-tel-black !text-tel-black"
-              }`}
-            />
-            <Button
-              label="TEL on TV"
-              handleClick={() => {
-                handleCurrentViewToggle("tel on tv");
-              }}
-              className={`w-fit px-3 ${
-                currentView === "tel on tv"
-                  ? "bg-tel-blue"
-                  : "!bg-transparent !border-tel-black !text-tel-black"
-              }`}
-            />
+          <div className="grid grid-cols-2 gap-y-4 md:gap-y-0 md:flex md:items-center  gap-x-4 w-full">
+            {buttons.map(({ label, value }, index) => (
+              <Button
+                key={index}
+                label={label}
+                handleClick={() => {
+                  handleCurrentViewToggle(value);
+                }}
+                className={`px-3 w-fit py-2 !h-auto  !text-center  ${
+                  currentView === value
+                    ? "bg-tel-blue"
+                    : "!bg-transparent !border-tel-black !text-tel-black"
+                }`}
+              />
+            ))}
           </div>
         </div>
         <div className="grid grid-cols-1  md:grid md:grid-cols-2 lg:grid-cols-4 gap-x-4 gap-y-14 w-full">
