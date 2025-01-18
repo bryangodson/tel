@@ -1,11 +1,9 @@
 import Button from "./button";
 function Hero() {
-  const isForGithubPages = true;
+  // const isForGithubPages = true;
   return (
     <div
-      className={`w-full p-10 bg-[url(${
-        isForGithubPages ? "/tel/" : "/"
-      }images/hero.jpg)] bg-cover bg-center flex items-center relative`}
+      className={`w-full p-10 bg-[url(/tel/images/hero.jpg)] bg-cover bg-center flex items-center relative`}
       style={{
         height: "calc(100svh - 120px)",
       }}>
