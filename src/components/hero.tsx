@@ -4,7 +4,7 @@ function Hero() {
   return (
     <div
       className={`w-full p-10 bg-[url(${
-        isForGithubPages ? "/tel/" : "/"
+        isForGithubPages ? "/" : "/"
       }images/hero.jpg)] bg-cover bg-center flex items-center relative`}
       style={{
         height: "calc(100svh - 120px)",
