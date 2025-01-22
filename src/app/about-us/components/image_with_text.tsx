@@ -4,11 +4,13 @@ interface imageWithTextProps {
   image: string;
   textData: Array<{ title: string; description: string }>;
   reversed?: boolean;
+  className?: string;
 }
 export default function ImageWithText({
   image,
   textData,
   reversed = false,
+  className = "",
 }: imageWithTextProps) {
   return (
     <div
@@ -17,7 +19,7 @@ export default function ImageWithText({
            reversed
              ? "flex-col-reverse md:flex-row-reverse"
              : "flex-col md:flex-row"
-         }`}>
+         } ${className}`}>
       <Image
         src={`/images/${image}`}
         alt={textData[0].title}
