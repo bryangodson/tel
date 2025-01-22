@@ -3,7 +3,7 @@ import { useState, useEffect } from "react";
 interface eventProps {
   view: string;
 }
-interface eventsTypesFromServer {
+export interface eventsTypesFromServer {
   eventTitle: string;
   location: string;
   time: string;

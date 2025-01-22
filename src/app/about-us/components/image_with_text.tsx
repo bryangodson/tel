@@ -5,12 +5,16 @@ interface imageWithTextProps {
   textData: Array<{ title: string; description: string }>;
   reversed?: boolean;
   className?: string;
+  imageClassName?: string;
+  textClass?: string;
 }
 export default function ImageWithText({
   image,
   textData,
   reversed = false,
   className = "",
+  imageClassName = "",
+  textClass = "",
 }: imageWithTextProps) {
   return (
     <div
@@ -27,13 +31,13 @@ export default function ImageWithText({
         height={160}
         className={`w-full md:w-1/2 lg:h-80 ${
           reversed ? "md:mt-28 mt-5" : "mt-0"
-        } object-cover`}
+        } object-cover ${imageClassName}`}
       />
-      <div className="flex flex-col w-full md:w-1/2 gap-y-3">
+      <div className={`flex flex-col w-full md:w-1/2 gap-y-3 `}>
         {textData.map(({ title, description }, index) => (
           <div key={index}>
-            <h3 className="font-bold text-tel-black">{title}</h3>
-            <p className="text-tel-black">{description}</p>
+            <h3 className={`font-bold text-tel-black ${textClass}`}>{title}</h3>
+            <p className={`text-tel-black ${textClass}`}>{description}</p>
           </div>
         ))}
       </div>
